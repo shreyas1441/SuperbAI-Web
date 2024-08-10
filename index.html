@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperbAI - App Information</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #dcdcdc;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+            color: #00ffcc;
+            padding: 30px 0;
+            min-height: 70px;
+            border-bottom: 3px solid #00ffcc;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ffcc;
+            animation: slideIn 1s ease-in-out;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1.5px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .download-button {
+            background-color: #00ffcc;
+            color: #24243e;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #00ff99;
+            transform: scale(1.1);
+        }
+
+        .content {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            color: #00ffcc;
+            text-shadow: 0 0 5px #00ffcc;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #00ffcc, #00ff99);
+            animation: underline 2s ease-in-out infinite;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        p:hover,
+        li:hover {
+            color: #00ff99;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            color: #00ff99;
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+
+        ol {
+            counter-reset: li-counter;
+        }
+
+        ol li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        ol li:hover {
+            transform: translateX(10px);
+        }
+
+        ol li:before {
+            content: counter(li-counter) ".";
+            counter-increment: li-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding-left: 20px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:before {
+            content: "▶";
+            padding-right: 10px;
+            color: #00ffcc;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+
+        ul li:hover:before {
+            transform: translateX(5px);
+        }
+
+        .content {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes underline {
+            0% {
+                left: 0%;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to SuperbAI</h1>
+            <a href="#" class="download-button" onclick="downloadSuperbAI()">Download App</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>App Description</h2>
+            <p>SuperbAI revolutionizes how you access and manage information with its seamless integration of AI and
+                Vision
+                capabilities. The app provides an effortless experience by allowing you to interact with content
+                directly
+                from your screen without switching between multiple apps. With the floating button feature, you can
+                easily activate voice commands, access a search bar, or view floating displays for quick information
+                retrieval. Smart Vision integration lets you capture screenshots or photos and instantly get insights or
+                answers about what’s on your screen. Customize your experience with various AI roles tailored to
+                different
+                needs, and use simple voice commands or the search bar to execute tasks, browse, and manage contacts.
+                Automated reminders ensure you never miss a task or meeting. SuperbAI offers intelligent, on-demand
+                information access, making it an essential tool for modern convenience. For more details, simply tap the
+                'Info' button within the app.</p>
+
+            <h2>Testing Instructions</h2>
+            <ol>
+                <li><strong>Installation and Setup:</strong>
+                    <ul>
+                        <a href="#" onclick="downloadSuperbAI()">Download and install the SuperbAI app</a>
+                        <li>Download and install the SuperbAI app from the designated app store.</li>
+                        <li>Grant the app 'All Files Access' permission to enable auto-detection of screenshots and
+                            camera photos.</li>
+                    </ul>
+                </li>
+                <li><strong>Home Screen:</strong>
+                    <ul>
+                        <li>Open the app and navigate to the Home Screen.</li>
+                        <li>Verify that you can select your AI’s Role and Language from the dropdown menu.</li>
+                        <li>Test each AI role to ensure it performs as described and displays its unique strengths.</li>
+                    </ul>
+                </li>
+                <li><strong>Anywhere Access:</strong>
+                    <ul>
+                        <li>Ensure the floating button is visible on all screens.</li>
+                        <li><strong>Long Press Gesture:</strong>
+                            <ul>
+                                <li>Long-press the floating button to activate Speech Recognition.</li>
+                                <li>Ask various questions (e.g., "What is Neural Network?") and verify that results are
+                                    displayed as a floating message.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Toss to Activate Search Bar:</strong>
+                            <ul>
+                                <li>Toss the floating button to enable the Search Bar.</li>
+                                <li>Double-tap the search bar to access 'VIVA-Commands' and test commands such as
+                                    'search
+                                    what is AI?', 'show me contacts', 'show me dial/number pad', 'set alarm at 5 PM',
+                                    and
+                                    'show meetings/tasks'.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Double Tap Gesture:</strong>
+                            <ul>
+                                <li>Double-tap the floating button to activate speech recognition.</li>
+                                <li>Test voice commands for browsing, calling, and setting alarms to ensure they
+                                    function
+                                    as expected.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Vision Integration:</strong>
+                    <ul>
+                        <li>Take a screenshot and verify that you are redirected to VIVA-Vision.</li>
+                        <li>Ask questions related to the screenshot (e.g., "What is this? Tell me more about it!").</li>
+                        <li>Take a photo using the camera and ask questions about it using VIVA-Vision.</li>
+                    </ul>
+                </li>
+                <li><strong>Permissions:</strong>
+                    <ul>
+                        <li>Confirm that the app requests and is granted 'All Files Access' permission for
+                            auto-detection
+                            features to work correctly.</li>
+                    </ul>
+                </li>
+                <li><strong>Info Button:</strong>
+                    <ul>
+                        <li>Locate and use the 'Info' button on various screens to ensure it provides accurate details
+                            about
+                            the app.</li>
+                    </ul>
+                </li>
+                <li><strong>General Usability:</strong>
+                    <ul>
+                        <li>Navigate through the app to check for ease of use, responsiveness, and accuracy of the
+                            features.</li>
+                        <li>Report any issues or inconsistencies encountered during testing.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        function downloadSuperbAI() {
+            const apkUrl = 'https://drive.google.com/file/d/1mpXiTZXxpf7O51kElSI6m4O32aU5k1eU/view?usp=drive_link'; // Replace with the actual APK file URL
+            const link = document.createElement('a');
+            link.href = apkUrl;
+            link.download = 'SuperbAI.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }   
+    </script>
+</body>
+
+</html>
